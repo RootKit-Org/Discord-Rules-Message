@@ -1,4 +1,7 @@
-# Discord Welcome Channel Message
-Our Welcome Screen
+# Discord Rules Message
 
-`yarn post` to post the messages
+Our Rules screen in Discord
+
+## Want to build your own?
+
+TODO SETUP

@@ -1,5 +1,6 @@
 import {
   AttachmentBuilder,
+  ButtonStyle,
   ContainerBuilder,
   MediaGalleryBuilder,
   SectionBuilder,
@@ -14,6 +15,19 @@ export const rulesAttachment = new AttachmentBuilder(rulesImage)
 const mg = new MediaGalleryBuilder().addItems((g) =>
   g.setURL("attachment://rules.png")
 );
+
+const attributionSection = new SectionBuilder()
+  .addTextDisplayComponents(
+    (td) => td.setContent("Want to build your own fancy embed like this?"),
+    (td) => td.setContent("The source code is available in our Github!")
+  )
+  .setButtonAccessory((b) =>
+    b
+      .setStyle(ButtonStyle.Link)
+      .setURL("https://github.com/RootKit-Org/Discord-Rules-Message")
+      .setLabel("View the Source Code")
+  );
+
 export const rules = new ContainerBuilder()
   .addMediaGalleryComponents(mg)
   .addTextDisplayComponents((td) =>
@@ -21,16 +35,16 @@ export const rules = new ContainerBuilder()
 # <:yellow1:1424122811303198730> Be Kind & Respectful
 > Treat everyone with respect, including our volunteers and fellow members.
 > We're here to support one another, so keep interactions positive and constructive.
-# <:yellow2:1424122808568385697> No Cheats, Hacks, or Illegal Activity
+# <:yellow2:1424122808568385697> No Hate Speech or Toxicity
+> Racist, Misogynistic, Sexist, and Ableist language is strictly prohibited.
+> Harassment, abuse, and Bullying will also not be tolerated. Any of this activity,
+> including Racial, religious, or sexual slurs may result in an Immidiate ban.
+# <:yellow3:1424122806903242782> No Cheats, Hacks, or Illegal Activity
 > This is **__NOT__** a cheat server, Nor do we support Black-Hat activities.
 > Asking for, Buying, or Selling Cheats will result in an __immidiate ban__.
 > NSFW (Not Safe for Work), Piracy, and Illegal Content is also not permitted here.
 > •
 > <:rules_warning:1424128278402433024> Discussions around Cyber Security and Exploits **Are** permitted.
-# <:yellow3:1424122806903242782> No Hate Speech or Toxicity
-> Racist, Misogynistic, Sexist, and Ableist language is strictly prohibited.
-> Harassment, abuse, and Bullying will also not be tolerated. Any of this activity,
-> including Racial, religious, or sexual slurs may result in an Immidiate ban.
 # <:yellow4:1424122805611528453> No Spam
 > Unapproved self-promotion, advertisements, or external links are **not** permitted. Please refrain from spamming Text, Emoji's, or Links.
 > •
@@ -48,4 +62,6 @@ export const rules = new ContainerBuilder()
 > No impersonating staff, bots, or other members.
 > No malicious links or files. This includes IP grabbers, malware, phishing links.
 `)
-  );
+  )
+  .addSeparatorComponents((sp) => sp.setDivider(true))
+  .addSectionComponents(attributionSection);

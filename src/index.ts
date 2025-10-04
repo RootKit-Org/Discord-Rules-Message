@@ -1,7 +1,6 @@
 import "dotenv/config";
 import { MessageFlags, WebhookClient } from "discord.js";
 import { rules, rulesAttachment } from "./embeds/rules";
-// import { welcome } from "./embeds/welcome";
 
 if (process.env.WEBHOOK_URL == null)
   throw new Error("Missing WEBHOOK_URL in .env");
@@ -14,8 +13,3 @@ client.send({
   files: [rulesAttachment],
   withComponents: true,
 });
-
-// client.send({
-//   components: [welcome],
-//   flags: [MessageFlags.IsComponentsV2],
-// });
