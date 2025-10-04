@@ -7,7 +7,6 @@ import {
 } from "discord.js";
 import { readFileSync } from "node:fs";
 
-const section = new SectionBuilder();
 const rulesImage = readFileSync("./assets/rules.png");
 export const rulesAttachment = new AttachmentBuilder(rulesImage)
   .setName("rules.png")
