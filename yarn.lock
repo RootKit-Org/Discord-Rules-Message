@@ -493,19 +493,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"Discord-Welcome-Channel-Message@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "Discord-Welcome-Channel-Message@workspace:."
-  dependencies:
-    "@swc-node/register": "npm:1.11.1"
-    "@swc/core": "npm:1.13.5"
-    "@types/node": "npm:24.6.2"
-    discord.js: "npm:14.22.1"
-    dotenv: "npm:17.2.3"
-    typescript: "npm:5.9.3"
-  languageName: unknown
-  linkType: soft
-
 "buffer-from@npm:^1.0.0":
   version: 1.1.2
   resolution: "buffer-from@npm:1.1.2"
@@ -538,6 +525,19 @@ __metadata:
   checksum: 10c0/9531a57ebcf35906b29edde1a5f9461735cc20295695a8f7aaef6cb130e6c640ad4970c1550ffa3d5a917ca2134e1ae37ffd5b191dd989b23d001bc285be4a87
   languageName: node
   linkType: hard
+
+"discord-welcome-channel-message@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "discord-welcome-channel-message@workspace:."
+  dependencies:
+    "@swc-node/register": "npm:1.11.1"
+    "@swc/core": "npm:1.13.5"
+    "@types/node": "npm:24.6.2"
+    discord.js: "npm:14.22.1"
+    dotenv: "npm:17.2.3"
+    typescript: "npm:5.9.3"
+  languageName: unknown
+  linkType: soft
 
 "discord.js@npm:14.22.1":
   version: 14.22.1
